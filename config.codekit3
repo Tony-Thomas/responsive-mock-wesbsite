@@ -134,9 +134,9 @@
 		},
 	"\/index.html": {
 		"ft": 8192,
-		"oA": 2,
+		"oA": 0,
 		"oAP": "\/index.html",
-		"oF": 0
+		"oF": 1
 		},
 	"\/sass\/main.css": {
 		"aP": 1,
