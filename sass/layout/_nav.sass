@@ -1,0 +1,85 @@
+.main-nav
+    background: $accent
+    position: absolute
+    top: 0
+    //bottom: 0
+    right: 0
+    //left: 0
+    left: 100%
+    //height: 100vh
+    font-size: 1.2rem
+
+    //hides navbar text that bleeds over from its left hidden position
+    overflow: hidden
+
+    // navigation transition
+    transition: all ease-in-out 250ms
+
+    ul
+        display: flex
+        flex-direction: column
+        //justify-content: space-around
+        //text-align: center
+        height: 100vh
+
+    li
+        //background: lightblue
+        flex: 1 1 auto
+        border-bottom: 1px solid rgba(0, 0, 0, .15)
+        //flex-grow:
+        //flex-shrink:
+        //flex-basis:
+        display: flex
+        //align-items: center
+        //justify-content: center
+
+    a
+        color: $text-inverse
+        text-decoration: none
+        //background: lightblue
+        flex-basis: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+
+        &:hover
+            background: rgba(0,0,0, .10)
+
+    // nav toggle
+    &.is-open
+        left: 0
+
+// hamburger menu
+
+.nav-toggle
+    //display: block
+    //background: pink
+    padding: 1em
+    position: absolute
+    right: 1em
+    top: 1em
+    cursor: pointer
+
+.hamburger, .hamburger::before, .hamburger::after
+    content: ''
+    display: block
+    width: 2em
+    height: 3px
+    background: $white
+    transition: all ease-in-out 250ms
+
+.hamburger::before
+    transform: translateY(-6px)
+
+.hamburger::after
+    transform: translateY(3px)
+
+.hamburger.is-open
+    transform: rotate(45deg)
+
+    &::after
+        transform: rotate(-90deg) translate(3px)
+
+    &::before
+        //display: none
+        opacity: 0
