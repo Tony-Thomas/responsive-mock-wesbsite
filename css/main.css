@@ -464,8 +464,18 @@ img {
   list-style: none;
 }
 
+.lg-screen {
+  display: none;
+}
+
+.bg-primary {
+  background: #048ca8;
+  color: white;
+  padding: 5em 2.5em;
+}
+
 h1, h2, h3, h3, h4, h5, h6, p {
-  margin-left: 0 0 .75em;
+  margin: 0 0 .75em;
 }
 
 h1:last-child, h2:last-child, h3:last-child, h4:last-child,
@@ -497,6 +507,33 @@ h2 {
   font-weight: 300;
 }
 
+.title-box {
+  background: #d31869;
+  color: white;
+  margin: 0 auto;
+  padding: 2em;
+  -webkit-transform: translateY(30%);
+          transform: translateY(30%);
+  max-width: 90%;
+}
+
+@media (min-width: 495px) {
+  .title-box {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+}
+
+.title-box + .bg-primary {
+  padding-top: 6em;
+}
+
+@media (min-width: 495px) {
+  .title-box + .bg-primary {
+    padding-top: 8em;
+  }
+}
+
 .text-intro {
   font-size: 1.2rem;
 }
@@ -513,6 +550,12 @@ h2 {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
+}
+
+.col--full {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100% auto;
+          flex: 0 0 100% auto;
 }
 
 .main-header {
@@ -535,10 +578,8 @@ h2 {
   padding-top: 8em;
   padding-bottom: 8em;
   text-align: center;
-}
-
-.hero .hero-img {
-  display: none;
+  /*.hero-img
+        display: none */
 }
 
 .main-nav {
@@ -641,7 +682,7 @@ h2 {
 }
 
 .sales-points {
-  padding: 10vh 0;
+  padding: 10vh 0 0;
 }
 
 .sales-point {
@@ -656,6 +697,8 @@ h2 {
   margin-bottom: 0;
 }
 
+/*.promo
+    padding: 10vh 0 */
 .btn {
   display: inline-block;
   padding: .75em 2.5em;

@@ -1,5 +1,5 @@
 h1, h2, h3, h3, h4, h5, h6, p
-    margin-left: 0 0 .75em
+    margin: 0 0 .75em
 
 h1:last-child, h2:last-child, h3:last-child, h4:last-child,
 h5:last-child, h6:last-child, p:last-child
@@ -24,6 +24,22 @@ h2
     font-weight: $font-black
     span
         font-weight: $font-light
+
+.title-box
+    background: $accent
+    color: $text-inverse
+    margin: 0 auto
+    padding: 2em
+    transform: translateY(30%)
+    max-width: 90%
+    @media (min-width: 495px)
+        transform: translateY(50%)
+
+
+    & + .bg-primary
+        padding-top: 6em
+        @media (min-width: 495px)
+            padding-top: 8em
 
 .text-intro
     font-size: 1.2rem
