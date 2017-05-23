@@ -6,4 +6,37 @@
     padding: 5em 0
     background-blend-mode: multiply
     color: $text-inverse
-    
+    position: relative
+    overflow: hidden
+    //border-top: .025em solid $white
+    //border-bottom: .025em solid $white
+
+    @media(min-width: 725px)
+        //padding: 10em 0
+
+        &::before, &::after
+            content: ''
+            display: block
+            background: $accent
+            position: absolute
+            width: 100%
+            border: .5em solid $white
+
+        &::before
+            top: 0
+            top: -1em
+            bottom: -1em
+            //bottom: 0
+            transform: skewX(35deg)
+            left: -90%
+
+        &::after
+            top: -1em
+            //top: 0
+            bottom: 0
+            bottom: -1em
+            transform: skewX(35deg)
+            right: -90%
+
+.container--cta
+    width: 50%
